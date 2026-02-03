@@ -1,13 +1,26 @@
 ﻿using System;
 
-class Program
+namespace SimpleInterest
 {
-    static void Main()
+    class Program
     {
-        double r, area;
-        Console.WriteLine("Enter the radius of the circle:");
-        r = Convert.ToDouble(Console.ReadLine());
-        area = Math.PI * r * r;
-        Console.WriteLine("Area of the circle is: " + area);
+        static void Main(string[] args)
+        {
+            double p, r, t, si;
+
+            Console.WriteLine("Enter principal amount:");
+            p = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter rate of interest:");
+            r = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter number of years:");
+            t = Convert.ToDouble(Console.ReadLine());
+
+            si = (p * r * t) / 100;
+            Console.WriteLine("Simple Interest is: " + si);
+
+            Console.ReadLine();
+        }
     }
 }
